@@ -13,9 +13,9 @@ xhr.onreadystatechange = function() {
     txt += "<table border='1'>";
     for (x in res) {
       txt += "<tr>";
-      txt += "<td>" + res[x].first_name + "</tr>";
-      txt += "<td>" + res[x].last_name + "</tr>";
-      txt += "<td>" + res[x].gender + "</tr>";
+      txt += "<td>" + res[x].first_name + "</td>";
+      txt += "<td>" + res[x].last_name + "</td>";
+      txt += "<td>" + res[x].gender + "</td>";
       txt += "</tr>";
     }
     txt += "</table>";
