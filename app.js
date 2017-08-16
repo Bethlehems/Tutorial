@@ -10,8 +10,11 @@ xhr.onreadystatechange = function() {
     var res = JSON.parse(xhr.responseText);
     var target = document.querySelector("#new");
     var txt, x;
-    txt += "<table border='1'>";
-    for (x in res) {
+    txt += "<table border='2'>";
+    txt += txt += "<td id=one>" + "First name" + "</td>";
+    txt += "<td id=two>" + "Last name" + "</td>";
+    txt += "<td id=three>" + "Gender" + "</td>";
+    for (x = 0; x < res.length; x++) {
       txt += "<tr>";
       txt += "<td>" + res[x].first_name + "</td>";
       txt += "<td>" + res[x].last_name + "</td>";
@@ -23,7 +26,9 @@ xhr.onreadystatechange = function() {
     div.innerHTML = txt;
     target.appendChild(div);
 
-    document.getElementById("new").style.color = "red";
+    document.getElementById("one").style.color = "blue";
+    document.getElementById("two").style.color = "blue";
+    document.getElementById("three").style.color = "blue";
 
     break;
   }
